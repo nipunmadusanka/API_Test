@@ -18,13 +18,14 @@ export default function Home() {
   const[open, setOpen]=useState(true);
   const[open1, setOpen1]=useState(false);
   const [drinkList, setdrinkList] = useState(dataDrinks);
-  const [searchdrink, setsearchdrink] = useState("Non_Alcoholic");
+  const [searchdrink, setsearchdrink] = useState("margarita");
   console.log(dataDrinks);
   console.log("hbhbhg");
+  
   const callAPI = async () => {
 		try {
 			const res = await fetch(
-				`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=`+searchdrink,
+				`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`+searchdrink,
 			);
 			const data = await res.json();
 			console.log(data);
@@ -33,8 +34,18 @@ export default function Home() {
 			console.log(err);
 		}
 	};
-  callAPI()
 
+  callAPI()
+  const submt= (event) => {
+    const name = event.target.value;
+    setsearchdrink(name);
+    console.log(name);
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(searchdrink);
+    console.log("test");
+  }
   // const fetchData = async () => {
   //   try {
   //     await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic", {
@@ -67,10 +78,10 @@ export default function Home() {
     <div className='bg-slate-600 h-screen'>
     <div className='bg-slate-600 items-center justify-between'>
     <div className='flex items-center justify-center py-16 w-full'> 
-     <form className='my-2'> 
+     <form className='my-2' onSubmit={handleSubmit}> 
       <input type="text" name='search' placeholder='search' className='border-2 border-black p-1 w-96'
       value={searchdrink}
-      onChange={event=>setsearchdrink(event.target.value)}
+      onChange={submt}
       ></input>
       <button
       type="submit" 
@@ -87,13 +98,13 @@ export default function Home() {
      <div className={`flex justify-center items-center my-5 ${ open ? '':'hidden' } `}>
      <div className='grid grid-cols-4 gap-1'>
      {drinkList.drinks.map((t, index) => (
-                        <Box title={t.strDrink} thumb={t.strDrinkThumb}/>
+                        <Box title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} tags={t.strTags}/>
                       ))}
       </div>
      </div>
      <div className={`grid grid-cols-1 gap-1 my-5 ${ open1 ? '':'hidden' } `}>
      {drinkList.drinks.map((t, index) => (
-                        <Box2 title={t.strDrink} thumb={t.strDrinkThumb}/>
+                        <Box2 title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} des={t.strInstructions} tags={t.strTags}/>
                       ))}
      </div>
     </div>
