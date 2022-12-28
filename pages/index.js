@@ -36,6 +36,7 @@ export default function Home() {
 	};
 
   callAPI()
+
   const submt= (event) => {
     const name = event.target.value;
     setsearchdrink(name);
