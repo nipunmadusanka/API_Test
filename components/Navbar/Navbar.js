@@ -5,7 +5,7 @@ export const Navbar = () => {
     <div className='fixed top-0 left-0 w-full z-10 ease-in duration-300 bg-slate-50'>
         <div className='max-w-[1240px] m-auto flex items-center justify-between p-4 text-black'>
             <a href="/">
-                <h1 className='font-bold text-2xl'>Wicky test </h1>
+                <h1 className='font-bold text-2xl'>Wicky</h1>
             </a>
            
         <div class="flex justify-center">
