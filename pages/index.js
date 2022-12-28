@@ -76,8 +76,9 @@ export default function Home() {
   // };
   // fetchData();
   return (
-    <div className='bg-slate-600 h-screen'>
-    <div className='bg-slate-600 items-center justify-between'>
+    <div className='h-screen bg-slate-50'>
+    
+    <div className=' items-center justify-between'>
     <div className='flex items-center justify-center py-16 w-full'> 
      <form className='my-2' onSubmit={handleSubmit}> 
       <input type="text" name='search' placeholder='search' className='border-2 border-black p-1 w-96'
