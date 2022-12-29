@@ -4,7 +4,7 @@ import { Input } from 'postcss'
 import Box from '../components/Box/Box'
 import styles from '../styles/Home.module.css'
 import react,{ useState } from 'react'
-import Box2 from '../components/Box/Box2/Box2'
+import Box2 from '../components/Box/Box2/list'
 import { data } from 'autoprefixer'
 
 const dataDrinks = {"drinks": []};
@@ -79,16 +79,16 @@ export default function Home() {
 
 
      <div className={`flex justify-center items-center my-5 ${ open ? '':'hidden' } `}>
-     <div className='grid grid-cols-4 '>
+     <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 '>
      {drinkList.drinks.map((t, index) => (
-                        <Box title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} tags={t.strTags} idDrink={t.idDrink}/>
+                        <Box title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} tags={t.strIngredient1} idDrink={t.idDrink}/>
                       ))}
       </div>
      </div>
 
      <div className={`grid grid-cols-1 gap-1 my-5 ${ open1 ? '':'hidden' } `}>
      {drinkList.drinks.map((t, index) => (
-                        <Box2 title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} des={t.strInstructions} tags={t.strTags} idDrink={t.idDrink}/>
+                        <Box2 title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} des={t.strInstructions} tags={t.strIngredient1} idDrink={t.idDrink}/>
                       ))}
      </div>
     </div>

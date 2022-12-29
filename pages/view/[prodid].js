@@ -23,7 +23,11 @@ function Product() {
   return (
     <div>
            {drinkList.drinks.map((t, index) => (
-                     <Afterglow instr={t.strInstructions} imgs={t.strDrinkThumb}/>
+                     <Afterglow instr={t.strInstructions} imgs={t.strDrinkThumb} brnd={t.strIngredient1} title={t.strDrink} 
+                     ing1={t.strIngredient1}
+                     ing2={t.strIngredient2}
+                     ing3={t.strIngredient3}
+                     ing4={t.strIngredient4}/>
             ))}
     </div>
   )

@@ -4,9 +4,8 @@ export const Navbar = () => {
   return (
     <nav class="border-gray-200 mb-2">
   <div class="container mx-auto flex p-5 flex-wrap items-center justify-between">
-  <a href="#" class="flex">
-    
-      <span class="self-center text-lg font-semibold font-serif">BREW</span>
+  <a href='\' class="flex">
+      <span class="self-center text-lg text-red-800 font-semibold font-serif">COCKTAIL</span>
   </a>
   
   <div class="hidden md:flex w-full md:w-auto md:order-1" id="mobile-menu-3">

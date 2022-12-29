@@ -13,13 +13,16 @@ export default function Box({title:title, thumb:thumb, type:type, tags:tags, idD
             // height={360}
           ></img>
         </div>
-        <div className='mx-4 my-2'>
+        <div className='mx-3 my-2'>
         <div className='item-center justify-center text-left'>
           <a href={'/view/'+idDrink}><p className='font-bold text-lg'>{title}</p></a>
           <p className='font-thin text-sm'>{type}</p>
         </div>
         <div className='item-center justify-center text-right mt-4'>
         <p className='text-sm font-mono'>{tags}</p>
+        </div>
+        <div className='item-center text-right'>
+          <p className='text-lg font-serif text-red-900 font-bold'>$100</p>
         </div>
         </div>
       </div>
