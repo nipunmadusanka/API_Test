@@ -76,27 +76,35 @@ export default function Home() {
   // };
   // fetchData();
   return (
-    <div className='h-screen bg-slate-50'>
+    <div className='bg-slate-50 h-screen w-screen'>
     
-    <div className=' items-center justify-between'>
-    <div className='flex items-center justify-center py-16 w-full'> 
-     <form className='my-2' onSubmit={handleSubmit}> 
-      <input type="text" name='search' placeholder='search' className='border-2 border-black p-1 w-96'
-      value={searchdrink}
-      onChange={submt}
-      ></input>
-      <button
-      type="submit" 
-      // onClick={()=>setsearchdrink(value)} 
-      className='bg-white text-black border-2 border-black p-1 w-44 font-bold hover:bg-amber-200'>Search</button>
-     </form>
-     </div>
+    <div className='items-center justify-center'>
+      <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+          <div className='input-group relative flex my-16 items-stretch w-full mb-4 rounded' onSubmit={handleSubmit}>
+            <input type="search" className='form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none' placeholder="Search" aria-label="Search" aria-describedby="button-addon2"
+            value={searchdrink} onChange={submt}></input>
+            <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded" id="basic-addon2">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
      <div className='flex justify-end items-end mx-24'>
      <div className='text-right mt-4'>
-      <button onClick={()=>{setOpen(true); setOpen1(false)}} className='bg-white hover:bg-amber-200 px-7 border-2 border-b-neutral-800'>Grid</button>
-      <button onClick={()=>{setOpen1(true); setOpen(false)}} className='bg-white hover:bg-amber-200 px-7 border-2 border-b-neutral-800'>Column</button>
+      <button onClick={()=>{setOpen(true); setOpen1(false)}} className='hover:bg-gray-200 px-3 '>
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+      </button>
+      <button onClick={()=>{setOpen1(true); setOpen(false)}} className='hover:bg-gray-200 px-3'>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+      </button>
      </div>
      </div>
+
+
      <div className={`flex justify-center items-center my-5 ${ open ? '':'hidden' } `}>
      <div className='grid grid-cols-4 gap-1'>
      {drinkList.drinks.map((t, index) => (

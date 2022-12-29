@@ -16,7 +16,7 @@ export default function Box2({title:title, thumb:thumb, des:des, type:type, tags
         </div>
       </div>
         <div className='w-2/3'>
-        <div className='mx-2 my-2'>
+        <div className='mx-5 my-2'>
         <div className='item-center justify-center text-left'>
         <a href={'/view/'+idDrink}><p className='font-bold text-lg'>{title}</p></a>
           <p className='font-thin text-sm'>{type}</p>

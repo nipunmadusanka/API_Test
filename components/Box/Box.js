@@ -13,7 +13,7 @@ export default function Box({title:title, thumb:thumb, type:type, tags:tags, idD
             // height={360}
           ></img>
         </div>
-        <div className='mx-2 my-2'>
+        <div className='mx-5 my-2'>
         <div className='item-center justify-center text-left'>
           <a href={'/view/'+idDrink}><p className='font-bold text-lg'>{title}</p></a>
           <p className='font-thin text-sm'>{type}</p>
