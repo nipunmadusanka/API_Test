@@ -2,68 +2,36 @@ import React from 'react'
 
 export const Navbar = () => {
   return (
-    <div className='fixed top-0 left-0 w-full z-10 ease-in duration-300 bg-slate-50'>
-        <div className='max-w-[1240px] m-auto flex items-center justify-between p-4 text-black'>
-            <a href="/">
-                <h1 className='font-bold text-2xl'>Wicky</h1>
-            </a>
-           
-        <div class="flex justify-center">
-        <div class="xl:w-96">
-            <div class="input-group relative flex justify-center items-center w-full rounded">
-            <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-            </input>
-            <span type="submit" class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded" id="basic-addon2">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                </svg>
-            </span>
-            </div>
-        </div>
-        </div>
-            <ul className='md:flex lg:flex'>
-                <li className='p-4'>
-                    <a href="/" className='hover:text-red-700'>Home</a>
-                </li>
-                <li className='p-4'>
-                    <a href="/#work" className='hover:text-red-700'>Shop</a>
-                </li>
-                <li className='p-4'>
-                    <a href="/#gallery" className='hover:text-red-700'>Gallery</a>
-                </li>
-                <li className='p-4'>
-                    <a href="/#contact" className='hover:text-red-700'>Contact</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="border-gray-200 mb-2">
+  <div class="container mx-auto flex p-5 flex-wrap items-center justify-between">
+  <a href="#" class="flex">
     
-    </div>
-//     <nav class="flex items-center justify-between flex-wrap bg-teal p-6 bg-slate-600">
-//     <div class="flex items-center flex-no-shrink text-white mr-6">
-//       <svg class="h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-//       <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-//     </div>
-//     <div class="block lg:hidden">
-//       <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-//         <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-//       </button>
-//     </div>
-//     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-//       <div class="text-sm lg:flex-grow">
-//         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-//           Docs
-//         </a>
-//         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-//           Examples
-//         </a>
-//         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white">
-//           Blog
-//         </a>
-//       </div>
-//       <div>
-//         <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0">Download</a>
-//       </div>
-//     </div>
-//   </nav>
+      <span class="self-center text-lg font-semibold font-serif">BREW</span>
+  </a>
+  
+  <div class="hidden md:flex w-full md:w-auto md:order-1" id="mobile-menu-3">
+    <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+      <li>
+        <a href="#" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded" aria-current="page">Home</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About</a>
+      </li>
+      <li>
+        <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Services</a>
+      </li>
+      <div class="flex md:order-2">
+      
+    <button data-collapse-toggle="mobile-menu-3" type="button" class="md:hidden text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-3" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </button>
+  </div>
+    </ul>
+  </div>
+  </div>
+</nav>
+
   )
 }

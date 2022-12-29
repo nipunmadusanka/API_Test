@@ -3,11 +3,11 @@ import React from 'react'
 export default function Box2({title:title, thumb:thumb, des:des, type:type, tags:tags, idDrink:idDrink}) {
   return (
     <div className='flex justify-center items-center'>
-     <div className='flex m-2 bg-neutral-50 p-1 w-3/4 border-2 border-black'>
+     <div className='flex m-2 bg-neutral-50 p-1 w-3/4 border-2 max-w shadow-lg rounded-lg ease-in'>
      <div className='w-1/3'>
         <div className=' item-center justify-center flex bg-cover w-full h-64'>
         <img
-         className='h-64 w-96'
+         className='h-64 w-96 rounded-lg'
             src={thumb}
             // alt="Product Image"
             // width={250}
@@ -19,9 +19,9 @@ export default function Box2({title:title, thumb:thumb, des:des, type:type, tags
         <div className='mx-5 my-2'>
         <div className='item-center justify-center text-left'>
         <a href={'/view/'+idDrink}><p className='font-bold text-lg'>{title}</p></a>
-          <p className='font-thin text-sm'>{type}</p>
+          <p className='font-thin font-serif text-red-500 mb-4 text-sm'>{type}</p>
           <div class="bg-fixed">
-                  <p class="font-thin text-[16px] text-slate-400">{des}</p>  
+                  <p class="font-thin text-[16px] text-slate-600">{des}</p>  
           </div>
         </div>
         <div className='item-center justify-center mt-4'>

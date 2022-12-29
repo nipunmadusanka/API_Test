@@ -47,36 +47,9 @@ export default function Home() {
     console.log(searchdrink);
     console.log("test");
   }
-  // const fetchData = async () => {
-  //   try {
-  //     await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic", {
-  //       method: "GET",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         "Accept": "*/*",
-  //         "api-key": "1",
-  //         "Access-Control-Allow-Headers": "Content-Type",
-  //         "Access-Control-Allow-Origin": "*",
-  //         "Access-Control-Allow-Credentials": "true",
-  //         "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-  //         "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
-
-  //       },
-  //     })
-  //       .then(
-  //         async (res) => await res.json()
-  //       )
-  //       .then((data) => {
-  //         console.log(data);
-  //         setdrinkList(data);
-  //       });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // fetchData();
+  
   return (
-    <div className='bg-slate-50 h-screen w-screen'>
+    <div className='bg-violet-50 w-screen'>
     
     <div className='items-center justify-center'>
       <div class="flex justify-center">
@@ -98,7 +71,7 @@ export default function Home() {
       <button onClick={()=>{setOpen(true); setOpen1(false)}} className='hover:bg-gray-200 px-3 '>
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
       </button>
-      <button onClick={()=>{setOpen1(true); setOpen(false)}} className='hover:bg-gray-200 px-3'>
+      <button onClick={()=>{setOpen1(true); setOpen(false)}} className='hover:bg-gray-200 px-'>
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
       </button>
      </div>
@@ -106,12 +79,13 @@ export default function Home() {
 
 
      <div className={`flex justify-center items-center my-5 ${ open ? '':'hidden' } `}>
-     <div className='grid grid-cols-4 gap-1'>
+     <div className='grid grid-cols-4 '>
      {drinkList.drinks.map((t, index) => (
                         <Box title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} tags={t.strTags} idDrink={t.idDrink}/>
                       ))}
       </div>
      </div>
+
      <div className={`grid grid-cols-1 gap-1 my-5 ${ open1 ? '':'hidden' } `}>
      {drinkList.drinks.map((t, index) => (
                         <Box2 title={t.strDrink} type={t.strAlcoholic} thumb={t.strDrinkThumb} des={t.strInstructions} tags={t.strTags} idDrink={t.idDrink}/>
